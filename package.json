@@ -10,7 +10,11 @@
     "auth:secret": "node --experimental-strip-types scripts/generate-auth-secret.ts",
     "format": "vp fmt . --write",
     "format:check": "vp fmt . --check",
-    "lint": "vp lint"
+    "lint": "vp lint",
+    "sync:upstream": "powershell -ExecutionPolicy Bypass -File scripts/sync-upstream.ps1",
+    "deploy:worker": "vp exec --filter worker -- wrangler deploy",
+    "deploy:status-page": "vp run --filter status-page build && vp exec --filter status-page -- wrangler deploy --config dist/server/wrangler.json",
+    "deploy:all": "pnpm deploy:worker && pnpm deploy:status-page"
   },
   "devDependencies": {
     "@shadcn/lint": "0.2.3",

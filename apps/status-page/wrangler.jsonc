@@ -28,7 +28,7 @@
   "kv_namespaces": [
     {
       "binding": "FLAREWATCH_STATE",
-      "id": "__FLAREWATCH_STATE_KV_NAMESPACE_ID__",
+      "id": "2240fb69338b431ea0e7ed752d01ce47",
     },
   ],
   "services": [
